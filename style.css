@@ -1,44 +1,148 @@
+/* General Body Styles */
 body {
-  background-color: white;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  transition: background-color 0.3s;
-}
-
-h1 {
-  margin: 20px;
-  font-size: 3rem;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, 200px);
-  gap: 20px;
+  background-color: #111;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 50px;
 }
 
+/* Multicolored Title */
+#title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.8rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+  white-space: nowrap;
+}
+
+#title span {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+/* Title Text Colors */
+.text-green {
+  color: #00FF66;
+}
+.text-red {
+  color: #FF3333;
+}
+.text-yellow {
+  color: #FFD700;
+}
+.text-blue {
+  color: #3399FF;
+}
+
+/* Main Game Container */
+.circle-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Color Buttons with Visible Boundaries */
 .btn {
-  width: 200px;
-  height: 200px;
-  border: 10px solid black;
-  border-radius: 20px;
-  opacity: 0.8;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
-  transition: 0.2s;
+  opacity: 0.95;
+  transition: all 0.2s;
+  box-sizing: border-box;
 }
 
-.green { background-color: green; }
-.red { background-color: red; }
-.yellow { background-color: yellow; }
-.blue { background-color: blue; }
+.green {
+  background-color: #00FF66;
+  border-top-left-radius: 100%;
+  border: 4px solid #111;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+}
+
+.red {
+  background-color: #FF3333;
+  border-top-right-radius: 100%;
+  border: 4px solid #111;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+}
+
+.yellow {
+  background-color: #FFD700;
+  border-bottom-left-radius: 100%;
+  border: 4px solid #111;
+  border-right-width: 2px;
+  border-top-width: 2px;
+}
+
+.blue {
+  background-color: #3399FF;
+  border-bottom-right-radius: 100%;
+  border: 4px solid #111;
+  border-left-width: 2px;
+  border-top-width: 2px;
+}
 
 .pressed {
-  box-shadow: 0 0 20px #666;
-  opacity: 1;
+  box-shadow: 0 0 30px white;
+  transform: scale(1.05);
 }
 
+/* Center Circle: White with Black Font */
+.center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Game Over Flash */
 .game-over {
-  background-color: #ff4c4c;
+  background-color: #b30000 !important;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 500px) {
+  .circle-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .btn {
+    width: 100%;
+    height: 100%;
+  }
+
+  .center-circle {
+    width: 70px;
+    height: 70px;
+    font-size: 1.1rem;
+  }
+
+  #title {
+    font-size: 2.2rem;
+  }
 }
