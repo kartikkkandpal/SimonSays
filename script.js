@@ -1,81 +1,78 @@
-const buttonColors = ["red", "blue", "green", "yellow"];
+const buttonColors = ["green", "red", "yellow", "blue"];
 let gamePattern = [];
-let userClickedPattern = [];
-
+let userPattern = [];
 let started = false;
 let level = 0;
 
-const clickSound = new Audio("click.mp3");
-const wrongSound = new Audio("wrong.mp3");
+const centerCircle = document.getElementById("center-circle");
 
-// Start game only on Enter key
-document.addEventListener("keydown", (event) => {
-  if (!started && event.key === "Enter") {
-    document.getElementById("level-title").textContent = "Level " + level;
+centerCircle.addEventListener("click", function () {
+  if (!started) {
+    centerCircle.textContent = "0";
     nextSequence();
     started = true;
   }
 });
 
-document.querySelectorAll(".btn").forEach(button => {
-  button.addEventListener("click", function () {
+document.querySelectorAll(".btn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    if (!started) return;
     const userChosenColor = this.id;
-    userClickedPattern.push(userChosenColor);
+    userPattern.push(userChosenColor);
     playSound(userChosenColor);
     animatePress(userChosenColor);
-    checkAnswer(userClickedPattern.length - 1);
+    checkAnswer(userPattern.length - 1);
   });
 });
 
 function nextSequence() {
-  userClickedPattern = [];
+  userPattern = [];
   level++;
-  document.getElementById("level-title").textContent = "Level " + level;
-
-  const randomNumber = Math.floor(Math.random() * 4);
-  const randomChosenColor = buttonColors[randomNumber];
-  gamePattern.push(randomChosenColor);
-
-  const button = document.getElementById(randomChosenColor);
-  button.classList.add("pressed");
-  playSound(randomChosenColor);
-  setTimeout(() => button.classList.remove("pressed"), 300);
+  centerCircle.textContent = level;
+  const randomColor = buttonColors[Math.floor(Math.random() * 4)];
+  gamePattern.push(randomColor);
+  setTimeout(() => {
+    animatePress(randomColor);
+    playSound(randomColor);
+  }, 500);
 }
 
 function playSound(name) {
-  if (name === "wrong") {
-    wrongSound.play();
-  } else {
-    clickSound.play();
-  }
+  const audio = document.getElementById("click-sound");
+  audio.currentTime = 0;
+  audio.play();
 }
 
-function animatePress(currentColor) {
-  const button = document.getElementById(currentColor);
-  button.classList.add("pressed");
-  setTimeout(() => button.classList.remove("pressed"), 100);
+function animatePress(color) {
+  const btn = document.getElementById(color);
+  btn.classList.add("pressed");
+  setTimeout(() => {
+    btn.classList.remove("pressed");
+  }, 150);
 }
 
 function checkAnswer(currentLevel) {
-  if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
-    if (userClickedPattern.length === gamePattern.length) {
-      setTimeout(nextSequence, 1000);
+  if (userPattern[currentLevel] === gamePattern[currentLevel]) {
+    if (userPattern.length === gamePattern.length) {
+      setTimeout(nextSequence, 800);
     }
   } else {
-    playSound("wrong");
+    const wrong = document.getElementById("wrong-sound");
+    wrong.play();
     document.body.classList.add("game-over");
-    document.getElementById("level-title").textContent = "Game Over, Press Enter to Restart";
-
+    centerCircle.textContent = "Game Over";
     setTimeout(() => {
       document.body.classList.remove("game-over");
+      setTimeout(() => {
+        resetGame();
+      }, 1000);
     }, 200);
-
-    startOver();
   }
 }
 
-function startOver() {
+function resetGame() {
   level = 0;
   gamePattern = [];
   started = false;
+  centerCircle.textContent = "Start";
 }
