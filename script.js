@@ -8,8 +8,9 @@ let level = 0;
 const clickSound = new Audio("click.mp3");
 const wrongSound = new Audio("wrong.mp3");
 
-document.addEventListener("keydown", () => {
-  if (!started) {
+// Start game only on Enter key
+document.addEventListener("keydown", (event) => {
+  if (!started && event.key === "Enter") {
     document.getElementById("level-title").textContent = "Level " + level;
     nextSequence();
     started = true;
@@ -63,7 +64,7 @@ function checkAnswer(currentLevel) {
   } else {
     playSound("wrong");
     document.body.classList.add("game-over");
-    document.getElementById("level-title").textContent = "Game Over, Press Any Key to Restart";
+    document.getElementById("level-title").textContent = "Game Over, Press Enter to Restart";
 
     setTimeout(() => {
       document.body.classList.remove("game-over");
