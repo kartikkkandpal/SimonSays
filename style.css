@@ -1,0 +1,39 @@
+body {
+  background-color: #011F3F;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+h1 {
+  margin: 20px;
+  font-size: 3rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.btn {
+  width: 200px;
+  height: 200px;
+  border: 10px solid black;
+  border-radius: 20px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.green { background-color: green; }
+.red { background-color: red; }
+.yellow { background-color: yellow; }
+.blue { background-color: blue; }
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  opacity: 1;
+}
