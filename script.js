@@ -78,9 +78,5 @@ function resetGame() {
   gamePattern = [];
   started = false;
   centerCircle.textContent = "Start";
-<<<<<<< HEAD
   centerCircle.classList.remove("game-over-text");
 }
-=======
-}
->>>>>>> 8a4f1bb27b89a53ac5d55c70cdbab201fbbb61e7
