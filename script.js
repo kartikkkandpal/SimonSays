@@ -9,6 +9,7 @@ const centerCircle = document.getElementById("center-circle");
 centerCircle.addEventListener("click", function () {
   if (!started) {
     centerCircle.textContent = "0";
+    centerCircle.classList.remove("game-over-text");
     nextSequence();
     started = true;
   }
@@ -61,6 +62,8 @@ function checkAnswer(currentLevel) {
     wrong.play();
     document.body.classList.add("game-over");
     centerCircle.textContent = "Game Over";
+    centerCircle.classList.add("game-over-text");
+
     setTimeout(() => {
       document.body.classList.remove("game-over");
       setTimeout(() => {
@@ -75,4 +78,5 @@ function resetGame() {
   gamePattern = [];
   started = false;
   centerCircle.textContent = "Start";
+  centerCircle.classList.remove("game-over-text");
 }
