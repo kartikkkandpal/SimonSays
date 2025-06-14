@@ -29,7 +29,7 @@ document.querySelectorAll(".btn").forEach(btn => {
 function nextSequence() {
   userPattern = [];
   level++;
-  centerCircle.textContent = level;
+  centerCircle.textContent = `Level ${level}`;
   const randomColor = buttonColors[Math.floor(Math.random() * 4)];
   gamePattern.push(randomColor);
   setTimeout(() => {
@@ -80,3 +80,16 @@ function resetGame() {
   centerCircle.textContent = "Start";
   centerCircle.classList.remove("game-over-text");
 }
+
+// THEME TOGGLE
+const toggleBtn = document.getElementById("theme-toggle");
+const currentTheme = localStorage.getItem("theme") || "dark";
+document.documentElement.setAttribute("data-theme", currentTheme);
+toggleBtn.textContent = currentTheme === "dark" ? "🌙 Dark Mode" : "☀️ Light Mode";
+
+toggleBtn.addEventListener("click", () => {
+  const newTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", newTheme);
+  toggleBtn.textContent = newTheme === "dark" ? "🌙 Dark Mode" : "☀️ Light Mode";
+  localStorage.setItem("theme", newTheme);
+});
