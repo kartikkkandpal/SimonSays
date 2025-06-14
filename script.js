@@ -5,6 +5,13 @@ let started = false;
 let level = 0;
 
 const centerCircle = document.getElementById("center-circle");
+const highScoreDisplay = document.getElementById("high-score");
+
+function updateHighScoreDisplay() {
+  const score = localStorage.getItem("highScore") || 0;
+  highScoreDisplay.textContent = `🏆 High Score: ${score}`;
+}
+updateHighScoreDisplay();
 
 centerCircle.addEventListener("click", function () {
   if (!started) {
@@ -74,6 +81,11 @@ function checkAnswer(currentLevel) {
 }
 
 function resetGame() {
+  const prevHigh = localStorage.getItem("highScore") || 0;
+  if (level > prevHigh) {
+    localStorage.setItem("highScore", level);
+    updateHighScoreDisplay();
+  }
   level = 0;
   gamePattern = [];
   started = false;
