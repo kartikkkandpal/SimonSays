@@ -21,9 +21,9 @@ A classic Simon Says memory game built with HTML, CSS, and JavaScript, featuring
 * **Responsive Design:** Fully playable on desktop and mobile screens.
 
 ## Screenshots
-| Light Mode (In-Game) | Dark Mode (In-Game) | Game Over |
-| :------------------: | :-----------------: | :-------: |
-| ![Light Mode Simon Says](Lightmode.png) | ![Dark Mode Simon Says](Darkmode.png) | ![Game Over](Gameover.png) |
+| Light Mode (In-Game) | Dark Mode (In-Game) | 
+| :------------------: | :-----------------: | 
+| ![Light Mode Simon Says](Lightmode.png) | ![Dark Mode Simon Says](Darkmode.png) |
 
 ## Tech Stack
 * **HTML:** For the structure of the game.
