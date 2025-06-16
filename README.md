@@ -36,7 +36,7 @@ To get a copy of this project up and running on your local machine, follow these
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/Simon-Says-Game.git
+    git clone https://github.com/kartikkandpal/Simon-Says.git
     cd Simon-Says-Game
     ```
 2.  **Download the project files:**
