@@ -36,7 +36,7 @@ To get a copy of this project up and running on your local machine, follow these
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/kartikkandpal/Simon-Says.git
+    git clone https://github.com/kartikkkandpal/Simon-Says.git
     cd Simon-Says
     ```
 2.  **Download the project files:**
