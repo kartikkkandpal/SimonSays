@@ -74,7 +74,7 @@ Contributions are welcome! If you have any suggestions, bug fixes, or new featur
 
 ## Live Demo
 
-Play the game live: [Simon Says](https://simon-says-kartikk.vercel.app/)  
+Play the game live: [Simon Says Live](https://simon-says-kartikk.vercel.app/)  
 
 ## License
 This project is open source and available under the [MIT License](LICENSE).
