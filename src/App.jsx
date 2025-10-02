@@ -50,7 +50,7 @@ export default function App() {
     <div className="min-h-screen flex items-center justify-center p-6">
       <div className="glass-card max-w-4xl w-full p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col items-center gap-6">
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-green-400 via-white via-60% to-yellow-300 to-90% bg-clip-text text-transparent drop-shadow-lg">
+          <h1 className="text-5xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-green-400 via-emerald-300 via-60% to-cyan-400 to-90% bg-clip-text text-transparent drop-shadow-lg">
             Simon Says
           </h1>
           <Scoreboard round={round} />
