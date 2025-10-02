@@ -73,10 +73,9 @@ A beautiful, interactive web application that challenges your memory by repeatin
    npm install
    npm run dev
    ```
-   Or open `index.html` directly for static preview.
-
-3. Open [http://localhost:5173](http://localhost:5173) in your browser.
-
+3. ```bash
+   Open [http://localhost:5173](http://localhost:5173) in your browser.
+   ```
 ---
 
 ## 🛠️ Technologies Used
