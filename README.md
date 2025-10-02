@@ -97,7 +97,7 @@ A beautiful, interactive web application that challenges your memory by repeatin
 
 ## 🖼️ Screenshots
 
-![SimonSays Screenshot](/preview.png)
+![SimonSays Screenshot](./public/preview.png)
 ---
 
 Test your memory and enjoy a beautiful, modern Simon Says experience!
