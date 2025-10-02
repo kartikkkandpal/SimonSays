@@ -8,7 +8,6 @@ A beautiful, interactive web application that challenges your memory by repeatin
 
 - [Features](#-features)
 - [Gameplay](#-gameplay)
-- [UI & Themes](#-ui--themes)
 - [Technical Details](#-technical-details)
 - [Run Instructions](#-run-instructions)
 - [Technologies Used](#️-technologies-used)
@@ -45,19 +44,6 @@ A beautiful, interactive web application that challenges your memory by repeatin
 - Repeat the sequence by clicking the tiles in order.
 - Each round adds a new tile to the sequence.
 - The game ends when you make a mistake—try to beat your highest round!
-
----
-
-## 🎨 UI & Themes
-
-- **Dark Mode:**  
-  Elegant blue-black gradients, glowing tiles, and glassy cards.
-
-- **Light Mode:**  
-  Clean white and blue backgrounds, geometric overlays, and dark blue buttons with white text.
-
-- **Theme Toggle:**  
-  Sun/Moon icon in the top right for instant switching.
 
 ---
 
@@ -111,7 +97,7 @@ A beautiful, interactive web application that challenges your memory by repeatin
 
 ## 🖼️ Screenshots
 
-![SimonSays Screenshot](preview.png)
+![SimonSays Screenshot](/preview.png)
 ---
 
 Test your memory and enjoy a beautiful, modern Simon Says experience!
