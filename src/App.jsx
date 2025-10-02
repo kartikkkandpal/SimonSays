@@ -50,7 +50,7 @@ export default function App() {
     <div className="min-h-screen flex items-center justify-center p-6">
       <div className="glass-card max-w-4xl w-full p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col items-center gap-6">
-          <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-yellow-300 via-pink-400 to-sky-400 bg-clip-text text-transparent drop-shadow">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-green-400 via-white via-60% to-yellow-300 to-90% bg-clip-text text-transparent drop-shadow-lg">
             Simon Says
           </h1>
           <Scoreboard round={round} />
@@ -64,12 +64,9 @@ export default function App() {
               isStarted={isStarted}
               isGameOver={isGameOver}
               isPlaying={isPlayingSequence}
+              lastMoveCorrect={lastMoveCorrect}
             />
           </div>
-
-          {!lastMoveCorrect && (
-            <div className="mt-3 text-red-400 font-semibold">Incorrect! Press Reset or Start to try again.</div>
-          )}
         </div>
 
         <div className="flex items-center justify-center">
