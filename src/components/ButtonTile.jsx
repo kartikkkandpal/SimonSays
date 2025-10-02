@@ -31,7 +31,7 @@ export default function ButtonTile({ color, index, onPress, disabled, flashKey }
   };
 
   const baseClasses =
-    'w-40 h-40 md:w-52 md:h-52 flex items-center justify-center rounded-2xl shadow-xl transition-transform duration-100';
+    'w-30 h-30 md:w-36 md:h-36 flex items-center justify-center rounded-2xl shadow-xl transition-transform duration-100';
   const activeClasses = isActive ? 'tile-glow scale-95 ring-4 ring-offset-2 ring-white/30' : '';
   const disabledClasses = disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer';
 

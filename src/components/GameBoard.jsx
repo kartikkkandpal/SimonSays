@@ -20,7 +20,7 @@ export default function GameBoard({ onTilePress, disabled }) {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 gap-6">
+    <div className="grid grid-cols-2 gap-3">
       <ButtonTile color="green" index={0} onPress={onTilePress} disabled={disabled} flashKey={flashIndex} />
       <ButtonTile color="red" index={1} onPress={onTilePress} disabled={disabled} flashKey={flashIndex} />
       <ButtonTile color="yellow" index={2} onPress={onTilePress} disabled={disabled} flashKey={flashIndex} />
