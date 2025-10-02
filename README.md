@@ -75,7 +75,7 @@ A beautiful, interactive web application that challenges your memory by repeatin
    ```
 3. Open Link in Your Browser:
    ```bash
-   http://localhost:5173=
+   http://localhost:5173
    ```
 ---
 
