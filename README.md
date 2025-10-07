@@ -6,13 +6,13 @@ A beautiful, interactive web application that challenges your memory by repeatin
 
 ## 📋 Table of Contents
 
-- [Features](#-features)
-- [Gameplay](#-gameplay)
-- [Technical Details](#-technical-details)
-- [Run Instructions](#-run-instructions)
-- [Technologies Used](#️-technologies-used)
-- [Author](#-author)
-- [Screenshots](#-screenshots)
+- [🌟 Features](#-features)
+- [🎮 Gameplay](#-gameplay)
+- [🔧 Technical Details](#-technical-details)
+- [💻 Run Instructions](#-run-instructions)
+- [🛠️ Technologies Used](#-technologies-used)
+- [👤 Author](#-author)
+- [Screenshots](#screenshots)
 
 ---
 
@@ -95,7 +95,7 @@ A beautiful, interactive web application that challenges your memory by repeatin
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 
 ![SimonSays Screenshot](./public/preview.png)
 ---
